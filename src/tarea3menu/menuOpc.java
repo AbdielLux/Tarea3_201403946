@@ -88,19 +88,23 @@ public final class menuOpc {
         menuUsuarios();
     }
     public void usuarioPersonalizado(){
-//        System.out.println("Ingrese un Usuario: ");
-//        Scanner usper = new Scanner(System.in);
-//        nombreUsuario = usper.nextLine();
-//        for (int i = 0; i < usuario.length; i++) {
-//            
-//            if (!nombreUsuario.equals(usuario[i])) {
-//                System.out.println("Usuario");
-//                System.out.println(usuario[i]);
-//            }else {
-//                System.err.println("!!ERROR!! no existe ningun usuario");
-//            }
-//            
-//        }
+  
+        System.out.println("Ingrese un Usuario: ");
+        Scanner usper = new Scanner(System.in);
+        nombreUsuario = usper.nextLine();
+        for (int i = 0; i < usuario.length; i++) {
+            
+            if (usuario[i].equals(nombreUsuario)) {
+                System.out.println("Usuario");
+                System.out.println(usuario[i]);
+
+            } else {
+                System.err.println("!!Error!! no existes el Usuario");
+                
+            }    
+        }
+        
+        
         menuUsuarios();
     }
     public void polidromas(){}
