@@ -93,17 +93,17 @@ public final class menuOpc {
         Scanner usper = new Scanner(System.in);
         nombreUsuario = usper.nextLine();
         for (int i = 0; i < usuario.length; i++) {
-            
             if (usuario[i].equals(nombreUsuario)) {
                 System.out.println("Usuario");
                 System.out.println(usuario[i]);
+                System.out.println(i);
 
-            } else {
-                System.err.println("!!Error!! no existes el Usuario");
-                
-            }    
-        }
-        
+            }else if( i+1 == 5){
+                System.err.println("!!ERROR!! El Usuario no existe");
+            }
+
+        } 
+
         
         menuUsuarios();
     }
