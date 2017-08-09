@@ -61,6 +61,7 @@ public final class menuOpc {
                 case 4:
                     break;
                 case 5:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("NO EXISTE ESTA OPCION");
