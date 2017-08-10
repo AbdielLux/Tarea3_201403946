@@ -93,21 +93,32 @@ public final class menuOpc {
         System.out.println("Ingrese un Usuario: ");
         Scanner usper = new Scanner(System.in);
         nombreUsuario = usper.nextLine();
-        for (int i = 0; i < usuario.length; i++) {
-            if (usuario[i].equals(nombreUsuario)) {
-                System.out.println("Usuario");
-                System.out.println(usuario[i]);
-                System.out.println(i);
+        if(!buscar(nombreUsuario).equals("f")){
+            System.out.println("usuario");
+            System.out.println(nombreUsuario);
+        } else{
+            System.err.println("!!ERROR!! no exites el usuario");
+        }
 
-            }else if( i+1 == 5){
-                System.err.println("!!ERROR!! El Usuario no existe");
-            }
-
-        } 
 
         
         menuUsuarios();
     }
-    public void polidromas(){}
+    public String buscar(String us) {
+        for (int i = 0; i < usuario.length; i++) {
+            if(usuario[i].equals(us)){
+                return "v";
+            }
+            
+        }
+        return "f";
+    }
+
+    public void polidromas(){
+
+     }
     
-}
+
+    }
+    
+
