@@ -7,6 +7,8 @@ public final class menuOpc {
     public int opc;
     public String[] usuario;
     public String nombreUsuario;
+    public String palIngresado;
+    
     public menuOpc(){
         opc = 0;
         nombreUsuario = "";
@@ -114,10 +116,37 @@ public final class menuOpc {
         return "f";
     }
 
-    public void polidromas(){
+    public void polidromas(){       
+
+        Scanner palIng = new Scanner(System.in);
+        System.out.println("Ingrese palabra");
+        palIngresado = palIng.nextLine();
+       
+        if(comparando(palIngresado)){
+            System.out.println("la palabra es palindroma ");   
+        }else{
+            System.out.println("la palabra no es palindroma");
+        }
 
      }
-    
+    public static boolean comparando(String pal) {
+
+        String aux = "";
+        int noPalabras = pal.length();
+        for (int i = 0; i < noPalabras; i++) {
+            if (!(pal.substring(i, i + 1).equals(" ")|| pal.substring(i, i + 1).equals(" ,"))) {
+                aux += pal.substring(i, i + 1);
+            }
+        }
+
+        noPalabras = aux.length();
+        for (int i = 0; i < noPalabras / 2; i++) {
+            if (!aux.substring(i, i + 1).equals(aux.substring(noPalabras - i - 1, noPalabras - i))) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     }
     
